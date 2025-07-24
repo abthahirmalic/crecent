@@ -3,12 +3,10 @@ body {
   margin: 0;
   padding: 0;
 }
-.cv-logo {
   width: 100px;       /* Adjust size as needed */
   height: auto;
   display: block;
   margin: 0 auto;     /* Center the logo */
-}
 
 header {
   background-color: #0077cc;
