@@ -62,7 +62,7 @@ section {
 section h2 {
   color: #0077cc;
   margin-top: 0;
-  margin-bottom: 10px; /* reduced spacing below h2 */
+  margin-bottom: 10px; /* reduce space below h2 */
   text-decoration: underline; /* underline */
   display: inline-block;      
   padding-bottom: 4px;
