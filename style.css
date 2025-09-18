@@ -46,4 +46,55 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Sections ===== *
+/* ===== Sections ===== */
+section {
+  background: #f9f9f9;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border-left: 6px solid #0077cc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0077cc;
+  margin-top: 0;
+}
+
+/* ===== Contact ===== */
+#contact {
+  background: #eef5fb;
+  border: 1px solid #cce0f5;
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* ===== Links ===== */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: white;
+  background: #182848;
+  border-radius: 0 0 12px 12px;
+}
