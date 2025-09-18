@@ -1,28 +1,96 @@
+/* ===== Global Styles ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+/* ===== Header ===== */
 header {
   background-color: #0077cc;
-  color: Blue;
-  padding: 20px;
+  color: white;
+  padding: 40px 20px;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+nav {
+  margin-top: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 20px;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main Layout ===== */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0077cc;
+  margin-top: 0;
+}
+
+/* ===== Lists & Links ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+a {
+  color: #0077cc;
   text-decoration: none;
 }
 
-main {
-  padding: 40px;
+a:hover {
+  text-decoration: underline;
 }
 
+/* ===== Footer ===== */
 footer {
   background-color: #f0f0f0;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
 }
