@@ -13,7 +13,7 @@ body {
   max-width: 1000px;
   margin: 40px auto;
   background: white;
-  padding: 30px 30px 30px 50px; /* Added extra left padding */
+  padding: 30px 30px 30px 50px; /* extra left padding */
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
@@ -61,10 +61,31 @@ h2 {
   margin-top: 0;
 }
 
+/* ===== Resume Links Underline ===== */
+section#resume a {
+  text-decoration: underline;
+  font-weight: 500;
+  color: #0077cc;
+}
+
+section#resume a:hover {
+  color: #005fa3;
+}
+
 /* ===== Contact ===== */
 #contact {
   background: #eef5fb;
   border: 1px solid #cce0f5;
+}
+
+#contact a {
+  text-decoration: underline;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  color: #005fa3;
 }
 
 /* ===== Lists ===== */
@@ -75,17 +96,6 @@ ul {
 
 li {
   margin-bottom: 12px;
-}
-
-/* ===== Links ===== */
-a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /* ===== Footer ===== */
