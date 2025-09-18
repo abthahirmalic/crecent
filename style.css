@@ -4,21 +4,22 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: #f4f7fb;
   color: #333;
 }
 
-/* ===== Header ===== */
+/* ===== Header (Top Bar) ===== */
 header {
-  background-color: #0077cc;
+  background: linear-gradient(90deg, #0077cc, #005fa3);
   color: white;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 nav {
@@ -38,17 +39,19 @@ nav a:hover {
 
 /* ===== Main Content ===== */
 main {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
+/* Each section styled like a card */
 section {
   background: white;
-  padding: 20px;
+  padding: 25px;
   margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  border-left: 6px solid #0077cc; /* Side design */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -58,8 +61,8 @@ h2 {
 
 /* ===== Contact Section ===== */
 #contact {
-  background-color: #e9ecef;
-  border: 1px solid #ccc;
+  background-color: #e9f2fb;
+  border: 1px solid #cce0f5;
 }
 
 ul {
@@ -69,25 +72,27 @@ ul {
 
 li {
   margin-bottom: 12px;
+  font-size: 1rem;
 }
 
 /* ===== Links ===== */
 a {
   color: #0077cc;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* ===== Footer ===== */
+/* ===== Footer (Bottom Bar) ===== */
 footer {
-  background-color: #f0f0f0;
+  background: #005fa3;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin-top: 40px;
   font-size: 14px;
-  color: #555;
-  border-top: 1px solid #ddd;
+  color: white;
+  border-top: 4px solid #003f73;
 }
