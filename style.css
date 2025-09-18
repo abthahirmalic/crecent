@@ -8,12 +8,12 @@ body {
   color: #333;
 }
 
-/* ===== Page Wrapper (white box in center) ===== */
+/* ===== Page Wrapper ===== */
 .container {
   max-width: 1000px;
   margin: 40px auto;
   background: white;
-  padding: 30px;
+  padding: 30px 30px 30px 50px; /* Added extra left padding */
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
@@ -49,7 +49,7 @@ nav a:hover {
 /* ===== Sections ===== */
 section {
   background: #f9f9f9;
-  padding: 25px;
+  padding: 25px 20px 25px 35px; /* extra left padding inside sections */
   margin-bottom: 25px;
   border-radius: 10px;
   border-left: 6px solid #0077cc;
