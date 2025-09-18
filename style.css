@@ -36,12 +36,9 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Main Layout ===== */
+/* ===== Main Content ===== */
 main {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
@@ -49,6 +46,7 @@ main {
 section {
   background: white;
   padding: 20px;
+  margin-bottom: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -58,7 +56,12 @@ h2 {
   margin-top: 0;
 }
 
-/* ===== Lists & Links ===== */
+/* ===== Contact Section ===== */
+#contact {
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -68,6 +71,7 @@ li {
   margin-bottom: 12px;
 }
 
+/* ===== Links ===== */
 a {
   color: #0077cc;
   text-decoration: none;
@@ -86,11 +90,4 @@ footer {
   font-size: 14px;
   color: #555;
   border-top: 1px solid #ddd;
-}
-
-/* ===== Responsive Design ===== */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
 }
