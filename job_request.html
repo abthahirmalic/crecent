@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Request | Sayed Abthahir</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Job Request Form</h1>
+    <p>Fill in your details and send a job request directly.</p>
+    <a href="index.html" class="btn">Back to CV</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="jobForm">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="job_description">Job Description</label>
+        <textarea id="job_description" name="job_description" rows="5" required></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+
+      <div class="thank-you" id="thankYouMessage">
+        Thank you! Your job request has been sent successfully.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sayed Abthahir | IT Administrator | <a href="https://crecent.shop">crecent.shop</a></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('jobForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent page reload
+
+      const formData = new FormData(form);
+      fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none'; // hide the form
+          thankYou.style.display = 'block'; // show thank you message
+        } else {
+          alert('Oops! There was a problem submitting your request.');
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem submitting your request.');
+      });
+    });
+  </script>
+</body>
+</html>
