@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayed Abuthahir | IT Administrator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sayed Abuthahir</h1>
+    <h2>IT & Network Administrator</h2>
+    <p>📍 Dubai, UAE | 📞 +971 50 524 9033 | 📧 abthahir.hameed@gmail.com</p>
+
+    <div class="cv-buttons">
+      <a href="Sayed_Abuthahir-IT_Administrator.pdf" target="_blank" class="btn">View CV</a>
+      <a href="Sayed_Abuthahir-IT_Administrator.pdf" download class="btn download">Download CV</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Experienced IT Administrator with over 10 years in managing, configuring, and securing IT infrastructure 
+        across educational and corporate environments. Skilled in network administration, virtualization, 
+        cloud integration, and systems management. Passionate about leveraging technology to optimize business 
+        performance and reliability.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <h3>IT Administrator | Emirates National School, Sharjah</h3>
+        <p><strong>July 2021 – Present</strong></p>
+        <ul>
+          <li>Managing Active Directory, Microsoft Entra ID, and Office 365 license assignments.</li>
+          <li>Administering VMware vCenter, Horizon VDI, and Dell EMC VxRail environments.</li>
+          <li>Configuring Cisco and HP switches with VLANs, routing, and firewall policies (Fortinet, Palo Alto).</li>
+          <li>Overseeing backup, antivirus, and wireless systems across campus.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>IT Administrator | Kings School, Dubai</h3>
+        <p><strong>May 2017 – July 2021</strong></p>
+        <ul>
+          <li>Managed Active Directory, DHCP, DNS, and G-Suite for over 1000 users.</li>
+          <li>Configured Aruba wireless networks and ClearPass authentication systems.</li>
+          <li>Implemented network and server monitoring using ManageEngine and SolarWinds.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Computer Engineer | DAR AL HAI Computers, Dubai</h3>
+        <p><strong>Aug 2015 – Apr 2017</strong></p>
+        <ul>
+          <li>Provided system installation, maintenance, and troubleshooting for clients.</li>
+          <li>Configured routers, access points, and VPN connectivity across devices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Network Administration</li>
+        <li>VMware vCenter & ESXi</li>
+        <li>Active Directory & GPO</li>
+        <li>Microsoft 365 & Azure</li>
+        <li>Firewall Configuration (Fortinet, Palo Alto)</li>
+        <li>Backup Management (Veeam)</li>
+        <li>Wi-Fi & VLAN Configuration</li>
+        <li>IT Service Management (ManageEngine, SolarWinds)</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Cisco Certified Network Associate (CCNA)</li>
+        <li>MCSA: Windows Server 2012</li>
+        <li>Ongoing training: MS Azure & VMware</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:abthahir.hameed@gmail.com">abthahir.hameed@gmail.com</a><br>
+        📞 +971 50 524 9033<br>
+        📍 Dubai, UAE
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sayed Abuthahir | IT Administrator | <a href="https://crecent.shop">crecent.shop</a></p>
+  </footer>
+</body>
+</html>
