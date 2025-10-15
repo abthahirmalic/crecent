@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Hiring Form | Sayed Abthahir</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background: #0078d7; /* matches your button color */
+      color: white;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .form-section {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-section label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-section button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-section button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Job Hiring Form</h1>
+    <p>If your company is hiring and wants to contact me, fill out this form.</p>
+    <a href="index.html" class="btn">Back to CV</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="hiringForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="job_title">Job Title / Position</label>
+        <input type="text" id="job_title" name="job_title" required>
+
+        <label for="job_description">Job Description / Requirements</label>
+        <textarea id="job_description" name="job_description" rows="5" required></textarea>
+
+        <button type="submit">Send Hiring Request</button>
+      </form>
+
+      <div class="thank-you" id="thankYouMessage">
+        Thank you! Your hiring request has been sent successfully.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sayed Abthahir | IT Administrator | <a href="https://crecent.shop">crecent.shop</a></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('hiringForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          alert('Oops! There was a problem submitting your hiring request.');
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem submitting your hiring request.');
+      });
+    });
+  </script>
+</body>
+</html>
