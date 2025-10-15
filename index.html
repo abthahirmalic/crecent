@@ -94,23 +94,52 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        📧 <a href="mailto:abthahir.hameed@gmail.com">abthahir.hameed@gmail.com</a><br>
-        📞 +971 50 524 9033<br>
-        📍 Dubai, UAE
-      </p>
-      <!-- Button linking to the Job hiring form -->
-      <a href="job_hiring.html" class="btn underline">Job Hiring Form</a>
-    </section>
-  </main>
+   <section id="contact">
+  <h2>Contact</h2>
+  <p>
+    📧 <a href="mailto:abthahir.hameed@gmail.com">abthahir.hameed@gmail.com</a><br>
+    📞 +971 50 524 9033<br>
+    📍 Dubai, UAE
+  </p>
+
+  <!-- Job Hiring Form button -->
+  <div style="margin-top: 15px;">
+    <a href="#job-hiring-form" class="btn underline">Job Hiring Form</a>
+  </div>
+</section>
+
+<!-- Job Hiring Form Section -->
+<section id="job-hiring-form" style="margin-top: 40px;">
+  <h2>Job Hiring Form</h2>
+  <p>If your company is hiring and would like to reach out, please fill in the details below:</p>
+
+  <form id="hiringForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width: 500px; margin: 20px auto;">
+    <label for="company">Company Name</label>
+    <input type="text" id="company" name="company" required>
+
+    <label for="email">Contact Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="job_title">Job Title / Position</label>
+    <input type="text" id="job_title" name="job_title" required>
+
+    <label for="job_description">Job Description / Requirements</label>
+    <textarea id="job_description" name="job_description" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Hiring Request</button>
+  </form>
+
+  <div class="thank-you" id="thankYouMessage" style="display:none; text-align:center; background:#d4edda; color:#155724; padding:15px; border-radius:10px;">
+    ✅ Thank you! Your hiring request has been sent successfully.
+  </div>
+</section>
 
   <footer>
     <p>© 2025 Sayed Abthahir | IT Administrator | <a href="https://crecent.shop">crecent.shop</a></p>
   </footer>
 </body>
 </html>
+
 
 
 
