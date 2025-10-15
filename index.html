@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sayed Abthahir | IT Administrator</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    #job-hiring-form {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #job-hiring-form input,
+    #job-hiring-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #job-hiring-form button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #job-hiring-form button:hover {
+      background-color: #005fa3;
+    }
+    .btn.underline {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -94,80 +139,73 @@
       </ul>
     </section>
 
-   <section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📧 <a href="mailto:abthahir.hameed@gmail.com">abthahir.hameed@gmail.com</a><br>
-    📞 +971 50 524 9033<br>
-    📍 Dubai, UAE
-  </p>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:abthahir.hameed@gmail.com">abthahir.hameed@gmail.com</a><br>
+        📞 +971 50 524 9033<br>
+        📍 Dubai, UAE
+      </p>
+      <div style="margin-top:15px;">
+        <a href="#job-hiring-form" class="btn underline">Job Hiring Form</a>
+      </div>
+    </section>
 
-  <!-- Job Hiring Form button -->
-  <div style="margin-top: 15px;">
-    <a href="#job-hiring-form" class="btn underline">Job Hiring Form</a>
-  </div>
-</section>
+    <!-- Job Hiring Form Section -->
+    <section id="job-hiring-form">
+      <h2>Job Hiring Form</h2>
+      <p>If your company is hiring and would like to reach out, please fill in the details below:</p>
 
-<!-- Job Hiring Form Section -->
-<section id="job-hiring-form" style="margin-top: 40px;">
-  <h2>Job Hiring Form</h2>
-  <p>If your company is hiring and would like to reach out, please fill in the details below:</p>
+      <form id="hiringForm" method="POST">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" required>
 
-  <form id="hiringForm" action="https://formspree.io/f/xgvnrawd" method="POST" style="max-width: 500px; margin: 20px auto;">
-    <label for="company">Company Name</label>
-    <input type="text" id="company" name="company" required>
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="email">Contact Email</label>
-    <input type="email" id="email" name="email" required>
+        <label for="job_title">Job Title / Position</label>
+        <input type="text" id="job_title" name="job_title" required>
 
-    <label for="job_title">Job Title / Position</label>
-    <input type="text" id="job_title" name="job_title" required>
+        <label for="job_description">Job Description / Requirements</label>
+        <textarea id="job_description" name="job_description" rows="5" required></textarea>
 
-    <label for="job_description">Job Description / Requirements</label>
-    <textarea id="job_description" name="job_description" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Hiring Request</button>
+      </form>
 
-    <button type="submit" class="btn">Send Hiring Request</button>
-  </form>
+      <div class="thank-you" id="thankYouMessage">
+        ✅ Thank you! Your hiring request has been sent successfully.
+      </div>
+    </section>
+  </main>
 
-  <div class="thank-you" id="thankYouMessage" style="display:none; text-align:center; background:#d4edda; color:#155724; padding:15px; border-radius:10px;">
-    ✅ Thank you! Your hiring request has been sent successfully.
-  </div>
-</section>
-
-<script>
-  const form = document.getElementById('hiringForm');
-  const thankYou = document.getElementById('thankYouMessage');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    fetch('https://formspree.io/f/xgvnrawd', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = 'none';
-        thankYou.style.display = 'block';
-      } else {
-        alert('Oops! There was a problem submitting your request.');
-      }
-    }).catch(error => {
-      alert('Oops! There was a problem submitting your request.');
-    });
-  });
-</script>
-
-    
   <footer>
     <p>© 2025 Sayed Abthahir | IT Administrator | <a href="https://crecent.shop">crecent.shop</a></p>
   </footer>
+
+  <script>
+    const form = document.getElementById('hiringForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      fetch('https://formspree.io/f/xgvnrawd', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          alert('Oops! There was a problem submitting your request.');
+        }
+      })
+      .catch(() => {
+        alert('Oops! There was a problem submitting your request.');
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
